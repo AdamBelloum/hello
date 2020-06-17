@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ansible-lint
-      - uses: ansible/ansible-lint-action@v4.1.0
+      - uses: actions/ansible-lint-action@v4.1.0
         with:
           name: lint-test
           path: hello/.github/workflows/nominal-testing.yml
