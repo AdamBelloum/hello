@@ -6,8 +6,13 @@ on: [push]
 jobs:
   build-and-run:
     name: Build and Run
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
+      - name: ansible-lint
+      - uses: ansible/ansible-lint-action@v4.1.0
+        with:
+          name: lint-test
+          path: hello/.github/workflows/nominal-testing.yml
       - uses: actions/checkout@v1
       - name: Build Code
         run: make
