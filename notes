@@ -1,0 +1,22 @@
+github command
+==============
+git status
+git add -u
+git push
+
+ansible-lint
+===========
+https://medium.com/faun/linting-your-ansible-playbooks-and-make-a-continuous-integration-ci-solution-bcf8b4ea4c03
+
+ansible
+=======
+# use the inventory file in your current directory 
+# default inventory shoud be /etc/ansible/hosts
+$ ansible -i inventory 
+
+#test if the remote server is accessible
+# make sure that the remote server has been added
+# to the inventory file
+# :q
+
+$ ansible all -i invnetory -m ping
