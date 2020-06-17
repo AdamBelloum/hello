@@ -10,21 +10,17 @@
   remote_user: ubuntu
   become: no
   tasks:
-
     - name: create dir for runner
       file:
         path: /tmp/actions_runner
         state: directory
-        
     - name: extract runner
       unarchive:
         src: https://githubassets.azureedge.net/runners/{{ runner_version }}/actions-runner-linux-x64-{{ runner_version }}.tar.gz
         dest: /tmp/actions_runner/
         creates: /tmp/actions_runner/config.sh
         remote_src: yes
-            
     - name: configure github action runner
       command: chdir=/tmp/actions_runner ./config.sh --url https://github.com/{{ repo }} --token '{{ github_actions_token }}'
-
     - name: run it
       shell: /tmp/actions_runner/run.sh &
