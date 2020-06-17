@@ -11,7 +11,7 @@ jobs:
       - uses: ansible/ansible-lint-action@v4.1.0
         with:
           name: lint-test
-          path: hello/.github/workflows/nominal-testing.yml
+          args: hello/.github/workflows/nominal-testing.yml
       - uses: actions/checkout@v1
       - name: Build Code
         run: make
