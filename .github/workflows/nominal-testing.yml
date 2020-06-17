@@ -10,7 +10,6 @@ jobs:
     steps:
       - uses: ansible/ansible-lint-action@v4.1.0
         with:
-          name: lint-test
           args: hello/.github/workflows/nominal-testing.yml
       - uses: actions/checkout@v1
       - name: Build Code
