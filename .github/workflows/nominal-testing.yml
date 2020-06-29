@@ -14,7 +14,7 @@ jobs:
         with:
           targets: |
            hello/playbook.yml
-           hello/playbook.yml
+           hello/playbook1.yml
 #           args: "hello/playbook.yml"
           key:  
       - uses: actions/checkout@v1
