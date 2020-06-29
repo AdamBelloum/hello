@@ -13,10 +13,9 @@ jobs:
         uses: ansible/ansible-lint-action@v4.1.0
         with:
           targets: |
-           hello/playbook.yml
-           hello/playbook1.yml
+            "hello/playbook.yml"
+            "hello/playbook1.yml"
 #           args: "hello/playbook.yml"
-          key:  
       - uses: actions/checkout@v1
       - name: Build Code
         run: make
