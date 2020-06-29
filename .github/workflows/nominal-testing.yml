@@ -12,9 +12,7 @@ jobs:
       - name: Lint Ansible Playbook
         uses: ansible/ansible-lint-action@v4.1.0
         with:
-          targets: |
-            "hello/playbook1.yml"
-            "hello/playbook.yml"
+          targets: "hello/playbook1.yml"
       - uses: actions/checkout@v1
       - name: Build Code
         run: make
